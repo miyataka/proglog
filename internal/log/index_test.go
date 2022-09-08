@@ -34,7 +34,7 @@ func TestIndex(t *testing.T) {
 		require.NoError(t, err)
 
 		_, pos, err := idx.Read(int64(want.Off))
-		require.Error(t, err)
+		require.NoError(t, err)
 		require.Equal(t, want.Pos, pos)
 	}
 
